@@ -1,3 +1,7 @@
+.swiper-container {
+    overflow: hidden;
+}
+
 .slider .swiper-slide {
     height: 100vh;
     box-sizing: border-box;
@@ -25,7 +29,7 @@
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top: 3px;
+    top: 3px !important;
     margin: 0;
     padding: 0;
     height: 8px;
