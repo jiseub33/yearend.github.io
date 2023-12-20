@@ -1,0 +1,313 @@
+.slider .swiper-slide {
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.swiper-slide button {
+    position: absolute;
+    width: 30%;
+    height: 100vh;
+    top: 0;
+    background: none;
+    border: none;
+    z-index: 15;
+}
+
+.slider .btn_prev {
+    left: 0;
+}
+
+.slider .btn_next {
+    right: 0;
+}
+
+.slider .paging {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 3px;
+    margin: 0;
+    padding: 0;
+    height: 8px;
+    z-index: 10;
+}
+
+.slider .paging .swiper-pagination-bullet {
+    flex: 1;
+    margin: 0;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.slider > button {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    z-index: 50;
+}
+
+.slider > .pause {
+    background: url(../image/pause.svg) no-repeat center / 30px;
+}
+
+.slider > .play {
+    background: url(../image/play.svg) no-repeat center / 30px;
+}
+
+/* 페이지 기본 세팅*/
+.swiper-slide .txt,
+.swiper-slide .txt2,
+.swiper-slide .txt3 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.swiper-slide h1 {
+    font-size: 60px;
+    font-weight: 900;
+    opacity: 0;
+}
+
+.swiper-slide h2 {
+    font-size: 50px;
+    font-weight: 900;
+    opacity: 0;
+}
+
+.swiper-slide h3 {
+    font-size: 30px;
+    font-weight: 900;
+    opacity: 0;
+}
+
+.swiper-slide h4 {
+    font-size: 20px;
+    font-weight: 900;
+    opacity: 0;
+}
+
+.swiper-slide p {
+    padding: 5px 0 0 0;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0;
+}
+
+/* 페이지 기본 에니메이션 세팅*/
+.swiper-slide-active .txt :nth-child(1) {
+    animation: basic-in .5s .5s ease-out forwards;
+}
+
+.swiper-slide-active .txt :nth-child(2) {
+    animation: basic-in .5s 1s ease-out forwards;
+}
+
+.swiper-slide-active .txt :nth-child(3) {
+    animation: basic-in .5s 1.5s ease-out forwards;
+}
+
+.swiper-slide-active .txt :nth-child(4) {
+    animation: basic-in .5s 2s ease-out forwards;
+}
+
+.swiper-slide-active .txt2 :nth-child(1) {
+    animation: basic-in .5s 6s ease-out forwards;
+}
+
+.swiper-slide-active .txt2 :nth-child(2) {
+    animation: basic-in .5s 7s ease-out forwards;
+}
+
+.swiper-slide-active .txt2 :nth-child(3) {
+    animation: basic-in .5s 8.5s ease-out forwards;
+}
+
+.swiper-slide-active .txt2 :nth-child(4) {
+    animation: basic-in .5s 10s ease-out forwards;
+}
+
+.swiper-slide-active .txt3 :nth-child(1) {
+    animation: basic-in .5s 14s ease-out forwards;
+}
+
+.swiper-slide-active .txt3 :nth-child(2) {
+    animation: basic-in .5s 15s ease-out forwards;
+}
+
+.swiper-slide-active .txt3 :nth-child(3) {
+    animation: basic-in .5s 16.5s ease-out forwards;
+}
+
+.swiper-slide-active .txt3 :nth-child(4) {
+    animation: basic-in .5s 18s ease-out forwards;
+}
+
+/* 1페이지 */
+.swiper-slide:nth-child(1) {
+    background: url(../image/page1.gif) no-repeat center / cover;
+}
+
+.swiper-slide:nth-child(1) .txt {
+    top: 30%;
+}
+
+.swiper-slide:nth-child(1) .btn_next {
+    position: static;
+    padding: 5px;
+    margin: 30px 0 0 0;
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background: #FFF;
+    font-size: 20px;
+    font-weight: 800;
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+/* 2페이지 */
+.swiper-slide:nth-child(2) {
+    background: #EBD3B5;
+}
+
+/* 3페이지 */
+.swiper-slide:nth-child(3) {
+    background: #DAC8F7;
+}
+
+.swiper-slide-active:nth-child(3) .txt {
+    animation: txt-out .5s 5s ease-out forwards;
+}
+
+.swiper-slide-active:nth-child(3) .txt2 {
+    animation: txt-out .5s 13s ease-out forwards;
+}
+
+/* 4페이지 */
+.swiper-slide:nth-child(4) {
+    background: #DAC8F7;
+}
+
+.swiper-slide:nth-child(4) .background {
+    overflow: hidden;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 300px;
+    background: #1858D9;
+    transform: translateY(200%);
+    scale: 0.5;
+}
+
+.swiper-slide-active:nth-child(4) .background img{
+    display: inline-block;
+    height: 100%;
+    transform: translate(-379px, 66px);
+    scale: 3;
+}
+
+.swiper-slide-active:nth-child(4) .background {
+    animation: background-in 1s 5s ease-out forwards;
+}
+
+.swiper-slide-active:nth-child(4) .background img{
+    animation: background-img-in 0.5s 5.5s ease-out forwards;
+}
+
+.swiper-slide-active:nth-child(4) .txt {
+    top: 20%;
+    animation: txt-out .5s 5s ease-out forwards;
+}
+
+.swiper-slide-active:nth-child(4) .txt2 {
+    top: 20%;
+}
+
+/* 5페이지 */
+.swiper-slide:nth-child(5) {
+    background: #D9D8A9;
+}
+
+.swiper-slide-active:nth-child(5) .txt {
+    animation: txt-out .5s 5s ease-out forwards;
+}
+
+/* 6페이지 */
+.swiper-slide:nth-child(6) {
+    background: #F2D5DD;
+}
+
+/* 7페이지 */
+.swiper-slide:nth-child(7) {
+    background: #F2ACC6;
+}
+
+.swiper-slide-active:nth-child(7) .txt {
+    animation: txt-out .5s 5s ease-out forwards;
+}
+
+
+.swiper-slide-active:nth-child(7) .txt2 {
+    animation: txt-out .5s 13s ease-out forwards;
+}
+
+@keyframes background-in {
+    0% {
+        transform: translateY(200%);
+    }
+
+    50% {
+        transform: translateY(0%);
+        scale: 0.5;
+    }
+
+    100% {
+        transform: translateY(20%);
+        scale: 1.3;
+    }
+}
+
+@keyframes background-img-in {
+    from {
+        scale: 3;
+        transform: translate(-379px, 66px);
+    }
+
+    to {
+        scale: 1.5;
+        transform: translate(-483px, 22px);
+    }
+}
+
+@keyframes basic-in {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    to {
+        opacity: 100;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes txt-out {
+    from {
+        opacity: 100;
+        transform: translateY(-50%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+}
